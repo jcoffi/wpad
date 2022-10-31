@@ -24,4 +24,4 @@ function FindProxyForURL(url, host) {
 //        return "PROXY 1.2.3.4:8080"; 
 
 // DEFAULT RULE: All other traffic, use below proxies, in fail-over order. 
-    return "PROXY 192.1681.200:3128"; }
+    return "PROXY 192.168.1.200:3128"; }
