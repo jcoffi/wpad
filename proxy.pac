@@ -28,9 +28,10 @@ function FindProxyForURL(url, host) {
 //    if (isInNet(myIpAddress(), "10.10.5.0", "255.255.255.0")) 
 //        return "PROXY 1.2.3.4:8080"; 
 
-// DEFAULT RULE: All other traffic, use below proxies, in fail-over order. 
+
       
     if (isResolvable(host)) {
         return "PROXY 192.168.1.200:3128"; DIRECT }
     
+// DEFAULT RULE: All other traffic, use below proxies, in fail-over order.     
     return "PROXY 192.168.1.200:3128"; DIRECT }
