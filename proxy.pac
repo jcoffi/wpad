@@ -8,6 +8,11 @@ function FindProxyForURL(url, host) {
 //    if (url.substring(0, 4)=="ftp:" || 
 //        shExpMatch(url, "http://abcdomain.com/folder/*")) 
 //        return "DIRECT"; 
+    
+   
+   
+
+ 
 
 // If the requested website is hosted within the internal network, send direct. 
     if (isPlainHostName(host) || 
@@ -24,4 +29,8 @@ function FindProxyForURL(url, host) {
 //        return "PROXY 1.2.3.4:8080"; 
 
 // DEFAULT RULE: All other traffic, use below proxies, in fail-over order. 
-    return "PROXY 192.168.1.200:3128"; }
+      
+    if (isResolvable(host)) {
+        return "PROXY 192.168.1.200:3128"; DIRECT }
+    
+    return "PROXY 192.168.1.200:3128"; DIRECT }
